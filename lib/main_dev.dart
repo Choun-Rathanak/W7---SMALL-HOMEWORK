@@ -1,3 +1,5 @@
+import 'package:homework/data/repositories/user/user_history_respository.dart';
+import 'package:homework/data/repositories/user/user_repository_mock.dart';
 import 'package:provider/provider.dart';
 import 'package:nested/nested.dart';
  
@@ -23,6 +25,8 @@ List<SingleChildWidget> get devProviders {
     ChangeNotifierProvider<AppSettingsState>(
       create: (_) =>AppSettingsState(repository: appSettingsRepository)
     ),
+    
+  Provider<UserHistoryRespository>(create: (_) => UserRepositoryMock()),
   ];
 }
 
